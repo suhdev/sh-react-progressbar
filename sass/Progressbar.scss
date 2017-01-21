@@ -1,0 +1,71 @@
+$sh-react-progressbar-wrapper-bg:#eee !default; 
+$sh-react-progressbar-progress-bg:#39B !default; 
+$sh-react-progressbar-height:1em !default; 
+$sh-react-progressbar-radius:0.5em !default;
+$sh-react-progressbar-transition-property:width !default; 
+$sh-react-progressbar-transition-duration:1s !default; 
+$sh-react-progressbar-transition-function:cubic-bezier(0,0,0,1) !default; 
+$sh-react-progressbar-value-fg:#333 !default; 
+$sh-react-progressbar-value-font-size:0.6em !default;
+$sh-react-progressbar-value-padding:0.3em !default; 
+
+%box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sh-react-progressbar {
+    @extend %box;
+    position:relative;
+    display:block;
+    height:$sh-react-progressbar-height;   
+  
+    .progressbar-wrapper{
+        @extend %box;
+        position:relative;
+        display:block; 
+        height:100%;
+        background:$sh-react-progressbar-wrapper-bg;
+        -webkit-border-radius: $sh-react-progressbar-radius;
+        -moz-border-radius: $sh-react-progressbar-radius;
+        -ms-border-radius: $sh-react-progressbar-radius;
+        -o-border-radius: $sh-react-progressbar-radius;
+        border-radius: $sh-react-progressbar-radius;
+        overflow:hidden;
+    }
+  
+    .progressbar-progress{
+        @extend %box;
+        position:absolute;
+        height:100%;
+        left:0px;
+        top:0px;
+        background-color:$sh-react-progressbar-progress-bg; 
+        -webkit-transition-duration: $sh-react-progressbar-transition-duration;
+        -o-transition-duration: $sh-react-progressbar-transition-duration;
+        transition-duration: $sh-react-progressbar-transition-duration;
+        -webkit-transition-property: $sh-react-progressbar-transition-property;
+        -o-transition-property: $sh-react-progressbar-transition-property;
+        transition-property: $sh-react-progressbar-transition-property;
+        -webkit-transition-timing-function: $sh-react-progressbar-transition-function;
+        -o-transition-timing-function: $sh-react-progressbar-transition-function;
+        transition-timing-function: $sh-react-progressbar-transition-function;
+    }
+    
+    .progress-value{
+        @extend %box;
+        position:absolute;
+        top:0px;
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color:$sh-react-progressbar-value-fg;
+        font-size:$sh-react-progressbar-value-font-size;
+        padding:$sh-react-progressbar-value-padding;
+        
+    }
+}

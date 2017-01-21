@@ -1,0 +1,47 @@
+.sh-react-progressbar, .sh-react-progressbar .progressbar-wrapper, .sh-react-progressbar .progressbar-progress, .sh-react-progressbar .progress-value {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.sh-react-progressbar {
+  position: relative;
+  display: block;
+  height: 1em; }
+  .sh-react-progressbar .progressbar-wrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+    background: #eee;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    overflow: hidden; }
+  .sh-react-progressbar .progressbar-progress {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #39B;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: width;
+    -o-transition-property: width;
+    transition-property: width;
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0, 1); }
+  .sh-react-progressbar .progress-value {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #333;
+    font-size: 0.6em;
+    padding: 0.3em; }
